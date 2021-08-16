@@ -1,5 +1,5 @@
 num = int(input("Digite um numero inteiro: "))
-print(num)
+print(f" O numero digitado foi : {num}")
 
 resp = str()
 
@@ -11,4 +11,4 @@ while a != 1:
 if a % 2 == 1:
     resp = resp + str(1)
 
-print(f"respota final é : {resp[::-1]}")
+print(f"Transformando {num} para base binária temos :{resp[::-1]}")
