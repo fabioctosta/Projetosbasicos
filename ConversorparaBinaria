@@ -1,0 +1,15 @@
+num = int(input("Digite um numero inteiro: "))
+print(num)
+
+resp = str()
+
+a = num
+while a != 1:
+    resp = resp + str(a % 2)
+    print(resp)
+    a = int(a/2)
+
+if a % 2 == 1:
+    resp = resp + str(1)
+
+print(f"respota final é : {resp[::-1]}")
