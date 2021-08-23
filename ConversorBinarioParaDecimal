@@ -1,0 +1,22 @@
+# teste se é binario
+
+full_binary = bool(False)
+
+while full_binary == False:
+    full_binary = True
+    binario = str(input('Digite o numero na base binária "zeros (0) ou uns (1): '))
+
+    for c in range(len(binario)):
+        if ((binario[c] != '1') and (binario[c] != '0')) :
+            print(f'O {c+1}º termo digitado " {binario[c]} ", nao é binario (0 ou 1)')
+            full_binary = False
+
+soma = int(0)
+
+for c in range(len(binario)):
+    digito = pow(2,len(binario) - c -1)*int(binario[c])
+    # print(digito)
+    soma = digito + soma
+
+print(f' O número binario {binario} possui {len(binario)} digitos \n')
+print(f' Equivale na base decimal a: {soma}')
